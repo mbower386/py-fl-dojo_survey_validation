@@ -10,11 +10,12 @@
 
 <body>
   <h1>Submitted Info</h1>
-  <p>Name: {{name}}</p>
-  <p>Location: {{location}}</p>
-  <p>Language: {{language}}</p>
-  <p>Comment: {{comment}}</p>
-
+  {% for survey in all_surveys %}
+  <p>Name: {{survey.name}}</p>
+  <p>Location: {{survey.location}}</p>
+  <p>Language: {{survey.language}}</p>
+  <p>Comment: {{survey.comment}}</p>
+  {% endfor %}
 </body>
 
 </html>
